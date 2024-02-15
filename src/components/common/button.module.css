@@ -1,0 +1,91 @@
+.button {
+    background: #0277ff;
+    color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 10px;
+    -webkit-box-shadow: 0 2px 10px #83bdff;
+    box-shadow: 0 2px 10px #83bdff;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+
+.button:disabled {
+    background: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.loading {
+    background: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+.btnOrange{
+    width: auto;
+    background:#F27C2C;
+    color: #fff;
+    padding: 16px 32px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 48px;
+}
+
+.btnMd{
+    width: auto;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation-fill-mode: both;
+    animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+    color: #FFF;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+}
+
+.loader:before {
+    left: -10px;
+    animation-delay: -0.32s;
+}
+
+.loader:after {
+    left: 10px;
+}
+
+
+@keyframes bblFadInOut {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0
+    }
+}

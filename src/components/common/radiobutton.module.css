@@ -1,0 +1,118 @@
+.field {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    /* -ms-flex-direction: column-reverse; */
+    /* flex-direction: column-reverse; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Normal Radio Button*/
+
+.radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    -webkit-transition: all .15s ease-out 0s;
+    transition: all .15s ease-out 0s;
+    background: #fff;
+    border: solid 2px #7b91a4;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.radio:hover {
+    border-color: #0277ff;
+}
+
+.radio:checked {
+    background: #0277ff;
+    border: solid 2px #0277ff;
+    -webkit-box-shadow: 0 0 4px #0278ff79;
+    box-shadow: 0 0 4px #0278ff79;
+}
+
+.radio:checked:before {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 6px;
+    left: 5px;
+    top: 1px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    text-align: center;
+    line-height: 20px;
+}
+
+.radio:checked:after {
+    -webkit-animation: click-wave .65s;
+    animation: click-wave .65s;
+    background: #0277ff;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.label {
+    cursor: pointer;
+}
+
+/* Normal Radio Button*/
+
+/* Tabular Radio button */
+
+.tabbularRadioBtn {
+    border: 2px solid #b4c4d3;
+    border-radius: 4px;
+    color: #152236;
+    display: none;
+}
+
+.tabbularLabel {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border: solid 2px #f7f9ff;
+    background: #e7ecfc;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.tabbularLabel svg{
+    margin-right: 8px;
+}
+
+.tabbularRadioParent input[type=radio]:checked+label {
+    border: solid 2px #72b3ff;
+    background: #cbe3ff;
+    color: #0277ff;
+}

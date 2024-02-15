@@ -1,0 +1,123 @@
+.quickPlay{
+    width: calc(98% - 8px);
+    position: fixed;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 4px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 5px 20px #2828288c;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.quickPlay .left{
+    display: flex;
+    width: 70%;
+}
+
+.quickPlay .left h3{
+    margin: 0;
+    padding: 0;
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.quickPlay .left img{
+    border-radius: 4px;
+}
+
+.quickPlay .right{
+    margin: 0;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continueGame{
+    font-size: 12px;
+    color: #0277ff;
+    margin-left: 8px;
+}
+
+.close {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: 6px 8px 0px 8px
+}
+
+
+
+.close:before, .close:after {
+    position: absolute;
+    left: 10px;
+    content: " ";
+    height: 16px;
+    width: 2px;
+    background-color: #9598a2;
+    border-radius: 50px;
+}
+
+.close:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.right img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation: pulse-img 2s infinite;
+    animation: pulse-img 2s infinite;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+
+
+@-webkit-keyframes pulse-img {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    70% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+}
+
+@keyframes pulse-img {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    70% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+}
+
+

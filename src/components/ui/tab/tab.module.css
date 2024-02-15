@@ -1,0 +1,238 @@
+.tabContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.tabContainer ul {
+    display: flex;
+    width:calc(100% - 50px);
+    background: #fff;
+    padding-top: 10px;
+    padding: 10px 10px 0 30px;
+    border-radius: 8px 8px 0 0;
+}
+
+.tabContainer ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabContainer ul li {
+    display: flex;
+}
+
+.tabContainer ul li a {
+    background: #EEEEEE;
+    border-radius: 8px;
+    padding: 0px 42px;
+    margin-right: 8px;
+    border-top: 0px solid #f1f4ff;
+    -webkit-transition: ease-in-out .6s;
+    transition: ease-in-out .6s;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabContainer ul li a:hover{
+    color: #F27C2C;
+}
+
+.tabContainer ul li a.active {
+    background: #F27C2C;
+    border-top: 0px solid #0277ff;
+    color: #fff;
+}
+
+.tabContainer .tabOneContent {
+    padding: 32px 30px;
+}
+
+.headingAndWidgets {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.headingAndWidgets .gameOtherWidgets {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.headingAndWidgets .gameOtherWidgets .ratingWidget, .headingAndWidgets .gameOtherWidgets .reportWidget {
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headingAndWidgets .gameOtherWidgets .ratingWidget {
+    background: #ECF0F4;
+    margin-right: 16px;
+    border-left: 4px solid #C1C1C1;
+    padding: 8px 16px;
+}
+
+.headingAndWidgets .gameOtherWidgets .ratingWidget>:first-child {
+    color: #4D6A8D;
+}
+.headingAndWidgets .gameOtherWidgets .ratingWidget span {
+    font-size: 12px;
+    color: #FC8C1B;
+    line-height: 24px;
+}
+.rate:not(:checked)>label {
+    float: right;
+    width: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: #FC8C1B;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 20px;
+    margin-right: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FC8C1B;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★';
+}
+
+.reportWidget {
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4px 8px;
+}
+
+.reportWidget {
+    flex-direction: column;
+    width: 80px;
+    height: 64px;
+    background: #ECF0F4;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.reportWidget a {
+    color: #152236;
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reportWidget img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.headingAndWidgets h1 {
+    width: 60%;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.grayBox{
+    border-color: #e3e9ff;
+    background: transparent -webkit-gradient(linear,left top,left bottom,from(#f8faff),to(#ffffff)) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg,#f8faff 0%,#ffffff 100%) 0% 0% no-repeat padding-box;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.ratingWrapper{
+    display: flex;
+}
+.ratingLeft{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #D9D9D9;
+    padding:8px 16px 4px 0px;
+}
+
+.ratingRight{
+    display: flex;
+    flex-direction: column;
+    padding:8px 0px 4px 16px;
+}
+
+.description{
+    font-size: 16px;
+    line-height: 20px;
+}
+.description span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+@media (max-width: 900px){
+    .tabContainer{
+        border-radius: 16px;
+    }
+    .tabContainer ul {
+        width: calc(100% - 20px);
+        background: #fff;
+        padding-top: 10px;
+        padding: 10px 10px 0 10px;
+    }
+    .tabContainer ul li a {
+        padding: 10px 20px;
+        height: auto;
+        font-size: 14px;
+    }
+    .headingAndWidgets{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tabContainer .tabOneContent {
+        padding: 32px 12px;
+    }
+    .description{
+        font-size: 14px;
+    }
+    .headingAndWidgets h1{
+        width: 99%;
+    }
+    .rate:not(:checked)>label {
+        margin-right: 0px;
+        width: 17px;
+
+    }
+    .reportWidget{
+        padding: 8px;
+        width: 70px;
+    }
+
+ 
+}
+
+@media screen and (max-width: 380px) {
+    .reportWidget{
+        padding: 8px;
+        width: 60px;
+    } 
+}

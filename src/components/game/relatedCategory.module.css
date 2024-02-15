@@ -1,0 +1,143 @@
+.relatedCategories {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.relatedCategories ul {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.relatedCategories ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.relatedCategories ul li {
+  width: calc(50% - 12px);
+  margin: 0 6px 8px;
+}
+
+.relatedCategories ul li a {
+  padding: 10px 12px 8px 44px;
+  display: flex;
+  border-radius: 34px;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  position: relative;
+  border: solid 1px #fff;
+}
+.relatedCategories ul li a:hover {
+  color: #0277ff;
+  border: solid 1px #fff;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0px 4px #00000012;
+}
+
+.relatedCategories ul li a img {
+  content: "";
+  display: flex;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: -2px;
+  top: 0;
+  border-radius: 36px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 4px;
+  align-items: center;
+}
+
+.relatedCategories ul li a span {
+  margin-left: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.iconSoccer {
+  text-transform: capitalize;
+  background-color: rgb(232, 242, 255);
+}
+.iconCricket {
+  text-transform: capitalize;
+  background-color: rgb(211, 253, 255);
+}
+.iconRugby {
+  text-transform: capitalize;
+  background-color: rgb(223, 247, 237);
+}
+.iconPerforming {
+  text-transform: capitalize;
+  background-color: rgb(255, 240, 217);
+}
+.iconSkating {
+  text-transform: capitalize;
+  background-color: rgb(255, 215, 252);
+}
+.iconHockey {
+  text-transform: capitalize;
+  background-color: rgb(232, 242, 255);
+}
+.iconTennis {
+  text-transform: capitalize;
+  background-color: rgb(211, 253, 255);
+}
+.iconBasketball {
+  text-transform: capitalize;
+  background-color: rgb(255, 230, 225);
+}
+.iconPool {
+  text-transform: capitalize;
+  background-color: rgb(255, 240, 217);
+}
+.iconBowling {
+  text-transform: capitalize;
+  background-color: rgb(252, 247, 234);
+}
+.iconBaseball {
+  text-transform: capitalize;
+  background-color: rgb(232, 242, 255);
+}
+.iconGolf {
+  text-transform: capitalize;
+  background-color: rgb(211, 253, 255);
+}
+@media (max-width: 900px) {
+  .relatedCategories {
+    padding: 0px 8px;
+    width: calc(100% - 16px);
+  }
+  .relatedCategories ul {
+    justify-content: space-between;
+  }
+  .relatedCategories ul li {
+    width: calc(50% - 8px);
+    margin: 0 4px 8px 0px;
+  }
+  .relatedCategories ul li a span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 22px;
+    margin-left: 0;
+  }
+  .relatedCategories ul li a img {
+    width: 30px;
+    height: 30px;
+  }
+  .relatedCategories ul li a {
+    padding: 10px 4px 7px 44px;
+  }
+}

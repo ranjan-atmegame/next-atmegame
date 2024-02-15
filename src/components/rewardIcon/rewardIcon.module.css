@@ -1,0 +1,11 @@
+.floatingIcon{
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    z-index: 1;
+    border-radius: 50px;
+    height: 76px;
+    width: 76px;
+    box-shadow: 0px 0px 28px #0000009c;
+    cursor: pointer;
+}

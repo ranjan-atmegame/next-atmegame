@@ -1,0 +1,59 @@
+.share {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.shareText {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.socialList {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+.socialList span{
+    font-size: 14px;
+}
+
+.socialIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.email {
+    background-color: #4d6a8d;
+}
+
+.copyTextBox {
+    cursor: pointer;
+}
+
+@media screen and (max-width:992px) {
+.shareText {
+    color: #7b91a4;
+}
+}

@@ -1,95 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import dynamic from "next/dynamic";
+import Ad from "@/components/ad";
+import A from "@/components/home/A";
 
-export default function Home() {
+const B = dynamic(() => import("@/components/home/B"));
+const Home = dynamic(() => import("@/components/home"));
+// import B from "@/components/home/B";
+// import Home from "@/components/home";
+import { getDevice, getRobot } from "./server";
+import { S3_IMAGE_PATH } from "@/config";
+// import CardContainer from "@/components/ui/card/CardContainer";
+
+export async function generateMetadata() {
+  const { robots, host: canonical } = getRobot(true);
+
+  return {
+    title:
+      "Play Free Online Games, Best Online Browser Games Without Downloading - Atmegame.com",
+    description:
+      "Play free online browser games without downloading. Atmegame.com bring you the best online HTML5 games  of different category including cricket, racing, action, adventure, sports, girls, dress up, puzzle, arcade and fighting games",
+    keywords: [
+      "play online games, play free online games, free games, best online game, best online free games",
+    ],
+    metadataBase: new URL("https://www.atmegame.com"),
+    alternates: {
+      canonical,
+    },
+    robots,
+    openGraph: {
+      type: "website",
+      title: "Play Online Free Games at Atmegame.com",
+      description:
+        "Atmegame is the online game website where you can play free games like racing, fighting, sports, girls games, puzzle, arcade, adventure and action",
+      url: "https://www.atmegame.com",
+      siteName: "Atmegame.com",
+      images: `${S3_IMAGE_PATH}/social/og-home-page.jpg`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      urls: "https://www.atmegame.com",
+      title: "Play Online Free Games– Atmegame",
+      description: "Play online the best and popular games free.",
+      site: "AtmeGame.com",
+      creator: "@Atmegame",
+      images: `${S3_IMAGE_PATH}/social/og-home-page.jpg`,
+    },
+  };
+}
+
+export default function Page({ params }) {
+  const isMobile = getDevice();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Ad
+        cardColor="whiteAd"
+        responsiveAd={isMobile}
+        name="home-advertisment"
+      />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <A isMobile={isMobile} />
+      <B isMobile={isMobile} />
+      <Home isMobile={isMobile} />
+    </>
   );
 }

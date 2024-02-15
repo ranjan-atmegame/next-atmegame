@@ -1,0 +1,69 @@
+.wrapper{
+    padding: 0px 24px 0px 24px;
+}
+
+.wrapper ol {list-style-type: upper-roman; margin: 0; padding: 0; margin-left: 30px;}
+.wrapper ol li{
+    list-style: upper-roman;
+    margin-bottom: 8px;
+}
+
+.sitckyMenu {
+    padding-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.sitckyLinks {
+    width: 280px;
+    padding-right: 0;
+}
+.sitckyLinks ul li{
+    margin-bottom: 8px;
+}
+.sitckyLinks ul li a{
+    font-size: 13px;
+    color: #0277ff;
+}
+
+.sitckyLinks ul li a:hover{
+    color: #F27C2C;
+}
+
+
+.grayBox{
+    border-color: #e3e9ff;
+    background: transparent -webkit-gradient(linear,left top,left bottom,from(#f8faff),to(#ffffff)) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg,#f8faff 0%,#ffffff 100%) 0% 0% no-repeat padding-box;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    width: calc(280px - 48px);
+    -webkit-box-shadow: 0 10px 15px #d3d8eb;
+    box-shadow: 0 10px 15px #d3d8eb;
+    border-radius: 8px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 24px;
+    background: #eeedf2;
+}
+
+.staticContentBox{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 60px;
+}
+
+@media (max-width: 992px) {
+    .grayBox{display:none;}
+    .staticContentBox{
+        padding-left: 0;
+    }
+    .sitckyMenu{
+        padding-top: 0;
+    }
+}

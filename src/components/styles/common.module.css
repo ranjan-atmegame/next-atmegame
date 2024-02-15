@@ -1,0 +1,305 @@
+.mainWrapper {
+  padding: 0;
+  margin: 0;
+}
+.topGames {
+  background: #5be3b8 0% 0% no-repeat padding-box;
+}
+
+.cookingGames {
+  background: #1cc7fb 0% 0% no-repeat padding-box;
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 90%;
+  width: 100%;
+  position: relative;
+}
+
+.cardContetSec {
+  width: 100%;
+  box-shadow: 0 10px 15px #d3d8eb;
+  border-top: solid #e3e9ff 1px;
+  background: transparent -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#f8faff),
+      to(#ffffff)
+    ) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #f8faff 0%, #ffffff 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 12px;
+  align-items: flex-start;
+  min-height: 100px;
+  padding: 30px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.gameCategory {
+  display: flex;
+}
+.contentSection p {
+  margin-top: 24px;
+  font-size: 16px;
+}
+.contentSection a.textlink {
+  color: #0277ff;
+}
+.contentSection .textlink:hover {
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNicgaGVpZ2h0PSc0JyB2aWV3Qm94PScwIDAgMTYgNCc+PHBhdGggZD0nTTAsMy41YzQsMCw0LTMsOC0zczQsMyw4LDMnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwNjVmZicgb3BhY2l0eT0nMC44JyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnLz48L3N2Zz4=");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 0;
+  background-size: 16px 4px;
+}
+
+.textlink:hover,
+.link_desc:hover {
+  background-size: 16px 4px;
+  -webkit-animation: textlink 0.4s linear infinite;
+  animation: textlink 0.4s linear infinite;
+}
+
+@-webkit-keyframes textlink {
+  from {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: 16px 100%;
+  }
+}
+
+@keyframes textlink {
+  from {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: 16px 100%;
+  }
+}
+
+.cardContetSec h1 {
+  font-size: 18px;
+  align-items: center;
+  display: flex;
+  line-height: 16px;
+  margin-left: 12px;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  width: 100%;
+  margin: 8px 4px;
+}
+
+@media only screen and (max-width: 900px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    margin: 8px 0px;
+  }
+  .cardContetSec {
+    max-width: 100%;
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .mainWrapper {
+    border-radius: 16px;
+  }
+}
+
+.w11 {
+  width: 11.1%;
+}
+.w20 {
+  width: 20%;
+}
+.w22 {
+  width: 22.10526%;
+  margin-left: 8px;
+}
+.w25 {
+  width: 25%;
+}
+.w33 {
+  width: 33.33333%;
+  margin-left: 8px;
+}
+.w40 {
+  width: 40%;
+}
+.w44 {
+  width: 44.38596%;
+  margin-left: 8px;
+}
+.w50 {
+  width: 50%;
+}
+.w60 {
+  width: 60%;
+}
+.w66 {
+  width: 67.36842%;
+  margin-left: 8px;
+}
+.w75 {
+  width: 75%;
+}
+.w100 {
+  width: 100%;
+}
+.w33:first-child {
+  margin-left: 0;
+}
+@media (min-width: 320px) and (max-width: 567px) {
+  .w20,
+  .dashboard .dashboard-menu {
+    width: 50%;
+  }
+  .w22 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w33 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w40 {
+    width: 100%;
+  }
+  .w44 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w50 {
+    width: 100%;
+  }
+  .w66 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 900px) {
+  .w20 {
+    width: 50%;
+  }
+  .w22 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w33 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w40 {
+    width: 100%;
+  }
+  .w44 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .w50 {
+    width: 100%;
+  }
+  .w66 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .w11 {
+    width: 11.1%;
+  }
+  .w20,
+  .dashboard .dashboard-menu {
+    width: 50%;
+  }
+  .w22 {
+    width: 100%;
+  }
+  .w33 {
+    width: 100%;
+  }
+  .w40 {
+    width: 100%;
+  }
+  .w44 {
+    width: 100%;
+  }
+  .w50 {
+    width: 100%;
+  }
+  .w66 {
+    width: 100%;
+  }
+  .w75 {
+    width: 75%;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .w33:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+  .w11 {
+    width: 11.1%;
+  }
+  .w20 {
+    width: 20%;
+  }
+  .w22 {
+    width: 22.10526%;
+    margin-left: 8px;
+  }
+  .w33 {
+    width: 33.33333%;
+    margin-left: 8px;
+  }
+  .w40 {
+    width: 40%;
+  }
+  .w44 {
+    width: 44.38596%;
+    margin-left: 8px;
+  }
+  .w50 {
+    width: 50%;
+  }
+  .w66 {
+    width: 67.36842%;
+    margin-left: 8px;
+  }
+  .w75 {
+    width: 75%;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .w33:first-child {
+    margin-left: 0;
+  }
+}

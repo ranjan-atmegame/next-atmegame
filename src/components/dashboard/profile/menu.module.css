@@ -1,0 +1,35 @@
+.menuItems{
+    padding:0;
+    margin: 0;
+}
+.menuItems ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menuItems ul li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menuItems ul li a {
+    font-size: 14px;
+    width: 100%;
+    padding: 14px 20px;
+    border-top: solid 1px #e3e9ff;
+    border-left: 4px solid #fff;
+}
+
+.menuItems ul li a.active{
+    color: #0277ff;
+    background: #eff6ff;
+    border-left: 4px solid #0277ff;
+}
+
+.menuItems ul li a.active, .menuItems ul li a:hover {
+    color: #0277ff;
+    background: #eff6ff;
+    border-left: 4px solid #0277ff;
+}

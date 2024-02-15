@@ -1,0 +1,36 @@
+.expanCollpase {
+    position: relative;
+    padding: 0 15px;
+}
+
+.list {
+    transition: max-height 500ms linear 0s;
+    -webkit-line-clamp: unset;
+    overflow: hidden;
+}
+
+.btn {
+    cursor: pointer;
+    color: blue;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    width: 120px;
+    margin: 0px auto;
+    margin-top: 16px;
+}
+
+.more {
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 16px;
+    transition: 0.6s;
+}
+
+
+@media screen and (max-width: 480px){
+    .expanCollpase {
+        padding: 0;
+    }   
+}

@@ -1,0 +1,227 @@
+.blog{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.blog .left{
+    width: 67.36842%;
+}
+
+.blog .right{
+    width: 33.33333%;
+    margin-left: 16px;
+}
+.bogh1{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.rightWrapper{
+    border-radius: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.rightWrapper h3{
+    margin: 16px;
+    margin-top: 0;
+}
+
+.rightWrapper img{
+    width: 100px;
+    height: 70px;
+    min-height: 40px;
+}
+.rightWrapper ul li span{
+    width: 25% !important;
+}
+
+.imgSizeSm img{
+    width: 100px;
+    height: 60px;
+    min-height: 40px;
+}
+
+.cardwithborder{
+    box-shadow: none;
+    border: none;
+}
+
+.blogDetails{
+    padding: 40px 40px;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.detailSec{
+    width:calc(100% - 30px);
+    margin-right:30px;
+    color: #152236;
+    font-size: 15px;
+}
+.detailSec p, .detailSec div{
+    color: #152236;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+.detailSec img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+.detailSec p a{
+    color: #0065ff;
+}
+.detailSec p a:hover{
+    color: #ff7a15;
+}
+.userCard{
+    width: 100%;
+    background: #edf0fc;
+    padding: 40px 0px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.userCard h3{
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+
+.userImage{
+    border-radius: 50px;
+}
+
+/* .socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 70%;
+    margin: 30px auto 0px auto;
+}
+.cardSm img{
+    max-height: 60px;
+}
+
+.socialIcon ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.socialIcon ul li a {
+    width: 50px;
+    text-align: left;
+    position: relative;
+    text-decoration: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    font-size: 12px;
+    text-align: center;
+}
+
+.socialIcon ul li a.fb::before {
+    background: #3b5998 url(https://www.atmegame.com/img/fb-white-icon.svg) center center no-repeat padding-box;
+}
+
+.socialIcon ul li a::before {
+    content: "";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: #cbe3ff;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.socialIcon ul li a.tw::before {
+    background: #55acee url(https://www.atmegame.com/img/tw-white-icon.svg) center center no-repeat padding-box;
+}
+
+.socialIcon ul li a.whatapp::before {
+    background: #25d366 url(https://www.atmegame.com/img/wa-white-icon.svg) center center no-repeat padding-box;
+}
+
+.socialIcon ul li a.email::before {
+    background: #4d6a8d url(https://www.atmegame.com/img/email-white-icon.svg) center center no-repeat padding-box;
+} */
+
+.innerSpace{
+    padding: 0px 16px;
+    width: calc(100% - 32px);
+}
+.innerSpace h3{
+    margin: 0;
+}
+
+
+@media (max-width:992px){
+    .blog{display: flex; flex-direction: column;}
+    .blog .left{
+        width: 100%;
+    }
+    
+    .blog .right{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .bogh1{
+       color: #fff;
+    }
+
+    .blogDetails{
+        padding: 16px 0px;
+        width: calc(100% - 0px);
+        background: transparent;
+    }
+    .blogDetails .left{
+        background: #fff;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 16px;
+        width: calc(100% - 32px);
+    }
+    .detailSec {
+        width: calc(100% - 0px);
+        margin-right: 0px;
+    }
+    .userCard{
+        margin-bottom: 12px;
+    }
+
+    .mobPopularArticle{
+        background: #fff;
+        border-radius: 8px;
+        padding-bottom: 8px;
+    }
+    .mobPopularArticle h3{
+        padding: 16px 16px 0px 16px;
+        margin-bottom: 8px;
+    }
+}
+
+
+
+
+
+.blogOverLay{
+    position: static !important;
+    background: #edf0fc !important;
+}
+
+.BlogModal{
+    position: static !important;
+    background: #edf0fc !important;
+    padding: 0 !important;
+}
+
+.BlogModal h3{
+    margin-bottom: 25px !important;
+    margin-top: 0 !important;
+}

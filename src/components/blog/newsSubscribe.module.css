@@ -1,0 +1,22 @@
+.newsSubscribe{
+    margin:16px;
+    width: calc(100% - 32px);
+}
+
+.header{
+    display: flex;
+}
+.header img{
+    margin-right: 8px;
+}
+
+.header h3{
+    margin: 0;
+
+}
+
+.header p{
+    color: #00000087;
+    margin: 0;
+    margin-bottom: 20px;
+}

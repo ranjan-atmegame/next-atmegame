@@ -1,0 +1,37 @@
+{
+  "short_name": "Atmegame",
+  "name": "Atmegame",
+  "theme_color": "#fc8c1b",
+  "orientation": "any",
+  "background_color": "#0368de",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://www.atmegame.com/img/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://www.atmegame.com/img/96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://www.atmegame.com/img/144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://www.atmegame.com/img/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://www.atmegame.com/img/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?utm_source=app&utm_medium=pwa"
+}

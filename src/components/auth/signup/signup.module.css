@@ -1,0 +1,637 @@
+.mainLogin {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    margin: 0px auto;
+    max-width: 94%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .formPage {
+    box-shadow: 0 10px 15px #d3d8eb;
+    border-top: solid #939393 0px;
+    border-radius: 12px;
+    align-items: flex-start;
+    display: flex;
+    margin: 40px 0px;
+    padding: 0;
+    background: #fff;
+  }
+  
+  .leftBox {
+    padding: 10px 110px 50px;
+    background: #f1f4fd;
+    width: 100%;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .radioWrapper{
+    display: flex;
+  }
+  
+  .commonImgBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .whyList {
+    margin-top: 24px;
+  }
+  .whyList .list {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    line-height: 1.4;
+  }
+  .whyList .list::before {
+    content: "";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffdb1b;
+  }
+  
+  .whyList .list::after {
+    content: "";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 3px;
+    height: 7px;
+    border: solid #a77700;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 1px 0px #ffe7e7;
+  }
+  
+  .rightBox {
+    padding: 32px 110px;
+    width: 100%;
+  }
+
+  .updateProfileWrapper {
+    padding: 32px 40px;
+    width:calc(100% - 80px);
+    max-width: 450px;
+  }
+  .errorMessage {
+    color: #ff5539;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .input {
+    display: block;
+    border: 0;
+    border: 2px solid #b4c4d3;
+    border-radius: 5px;
+    outline: 0;
+    color: #152236;
+    padding: 12px 16px;
+    font-family: inherit;
+    cursor: text;
+    background: #fff;
+  }
+  
+  .label {
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translate(16px, 2.6rem);
+  }
+  
+  .customCheckbox {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .checkBox {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: solid 2px #0277ff;
+  }
+  
+  .checkLebel {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .checkLebel:before {
+    content: "";
+    -webkit-appearance: none;
+    border-radius: 4px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border: solid 2px #0277ff;
+  }
+  
+  .forgotPwd {
+    float: right;
+    color: #0277ff;
+  }
+  
+  .btnBlue {
+    background: #0277ff;
+    color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 10px;
+    -webkit-box-shadow: 0 2px 10px #83bdff;
+    box-shadow: 0 2px 10px #83bdff;
+  }
+  
+  .signSignupOptions {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  
+  .googleBtn {
+    padding: 8px 16px;
+    border: solid 1px;
+    margin: 0 4px 10px;
+    border-radius: 8px;
+    border-color: #eb4335;
+    color: #eb4335;
+  }
+  
+  .googleImg {
+    margin-right: 8px;
+  }
+  
+  .signSignupLink {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .signSignupLink a {
+    color: #0277ff;
+  }
+  
+  .field label {
+    font-size: 14px;
+    color: #4d6a8d;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    background: #fcfcff;
+    padding: 0 5px;
+  }
+  
+  .field input:placeholder-shown + label,
+  .field select:placeholder-shown + label,
+  .field textarea:placeholder-shown + label,
+  .field select:placeholder-shown + label {
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: translate(16px, 2.6rem);
+    transform: translate(16px, 2.6rem);
+  }
+  
+  /* .mainLogin button,input[type=button],select[type=button],input[type=submit],select[type=submit],input[type=reset],select[type=reset] {
+        outline: none;
+        cursor: pointer;
+        border: none
+    } */
+  
+  /* .mainLogin input,
+    select,
+    textarea {
+      border: 2px solid #b4c4d3;
+      border-radius: 4px;
+      color: #152236;
+    }
+    
+    .mainLogin textarea {
+      resize: vertical;
+    }
+    
+    .mainLogin select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #fff url(https://www.atmegame.com/img/select-arrow-down.svg) 94%
+        center no-repeat;
+    }
+    
+    .custom-radio label {
+      display: inline-block;
+      width: 49%;
+      padding: 10px;
+      border: solid 2px #f7f9ff;
+      background: #e7ecfc;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+    } */
+  
+  .custom-radio input[type="radio"],
+  .custom-radio select[type="radio"] {
+    display: none;
+  }
+  
+  .custom-radio input[type="radio"]:checked + label,
+  .custom-radio select[type="radio"]:checked + label {
+    border: solid 2px #72b3ff;
+    background: #cbe3ff;
+    color: #0277ff;
+  }
+  
+  .custom-radio input[type="radio"]:checked + label svg,
+  .custom-radio select[type="radio"]:checked + label svg {
+    fill: #0277ff;
+  }
+  
+  .field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .field label,
+  .field input,
+  .field select,
+  .field textarea,
+  .field select {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
+  
+  .field input[type="text"],
+  .field select[type="text"],
+  .field [type="tel"],
+  .field [type="email"],
+  .field [type="password"],
+  .field textarea,
+  .field select {
+    display: block;
+    border: 0;
+    border: 2px solid #b4c4d3;
+    border-radius: 5px;
+    outline: 0;
+    color: #152236;
+    padding: 12px 16px;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: text;
+    background: #fff;
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+  }
+  
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus,
+  .field select:focus {
+    outline: 0;
+    border: 2px solid #0d86f7;
+  }
+  
+  .field select {
+    -webkit-appearance: inherit;
+    background: url(https://www.atmegame.com/img/select-arrow-down.svg) 96% center
+      no-repeat;
+  }
+  
+  .field label {
+    font-size: 14px;
+    color: #4d6a8d;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    background: #fcfcff;
+    padding: 0 5px;
+  }
+  
+  .field input:placeholder-shown + label,
+  .field select:placeholder-shown + label,
+  .field textarea:placeholder-shown + label,
+  .field select:placeholder-shown + label {
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: translate(16px, 2rem);
+    transform: translate(16px, 2rem);
+  }
+  
+  .field ::-webkit-input-placeholder,
+  .field ::-moz-input-placeholder,
+  .field ::-webkit-textarea-placeholder,
+  .field ::-webkit-select-placeholder {
+    opacity: 0;
+    -webkit-transition: inherit;
+    transition: inherit;
+  }
+  
+  .field input:focus::-webkit-input-placeholder,
+  .field select:focus::-webkit-input-placeholder,
+  .field input:focus::-moz-input-placeholder,
+  .field select:focus::-moz-input-placeholder,
+  .field textarea:focus::-webkit-textarea-placeholder,
+  .field select:focus::-webkit-select-placeholder {
+    opacity: 1;
+  }
+  
+  .field input:not(:placeholder-shown) + label,
+  .field select:not(:placeholder-shown) + label,
+  .field textarea:not(:placeholder-shown) + label,
+  .field select:not(:placeholder-shown) + label,
+  .field input:focus + label,
+  .field select:focus + label,
+  .field textarea:focus + label,
+  .field select:focus + label {
+    -webkit-transform: translate(13px, 13px);
+    transform: translate(13px, 13px);
+    cursor: pointer;
+  }
+  
+  .customCheckbox {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .customCheckbox label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .customCheckbox label a {
+    color: #0277ff;
+  }
+  
+  .customCheckbox label:before {
+    content: "";
+    -webkit-appearance: none;
+    border-radius: 4px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border: solid 2px #0277ff;
+  }
+  .customCheckbox input:checked + label:after,
+  .customCheckbox select:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 6px;
+    height: 11px;
+    border: solid #0277ff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .customCheckbox input,
+  .customCheckbox select {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: solid 2px #0277ff;
+  }
+  
+  .customCheckbox input:checked + label:after,
+  .customCheckbox select:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 6px;
+    height: 11px;
+    border: solid #0277ff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .signSignupOptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 50px;
+  }
+  
+  .googleBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    color: #eb4335;
+    padding: 8px 16px;
+    border: solid 1px #eb4335;
+    margin: 0 4px 10px;
+    border-radius: 8px;
+    align-items: center;
+  }
+  .googleBtn:hover {
+    color: #eb4335;
+  }
+  .whatsAppBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    color: #018b48;
+    padding: 8px 16px;
+    border: solid 1px #018b48;
+    margin: 0 4px 10px;
+    border-radius: 8px;
+  }
+  .whatsAppBtn:hover {
+    color: #018b48;
+  }
+  .mR10 {
+    margin-right: 10px;
+  }
+  .signSignupSptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .errorMessage {
+    color: red;
+  }
+  .successMessage {
+    color: green;
+  }
+  
+  .customRadio {
+    display: flex;
+  }
+  .radioInner {
+    width: 50%;
+  }
+  .customRadio label {
+    display: block;
+    width: calc(100% - 30px);
+    padding: 10px;
+    border: solid 2px #f7f9ff;
+    background: #e7ecfc;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .customRadio label.spacer {
+    margin-left: 10px;
+  }
+  .mfIcon {
+    margin-left: 6px;
+  }
+  
+  .customRadio input[type="radio"],
+  .customRadio select[type="radio"] {
+    display: none;
+  }
+  
+  .customRadio input[type="radio"]:checked + label,
+  .customRadio select[type="radio"]:checked + label {
+    border: solid 2px #72b3ff;
+    background: #cbe3ff;
+    color: #0277ff;
+  }
+  
+  .customRadio input[type="radio"]:checked + label svg,
+  .customRadio select[type="radio"]:checked + label svg {
+    fill: #0277ff;
+  }
+  
+  .goBack {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+  }
+  .mT16 {
+    margin-top: 16px;
+  }
+  
+  @media (max-width: 900px) {
+    .formPage {
+      flex-direction: column-reverse;
+      box-shadow: 0 10px 15px #0026b738;
+      margin: 40px 8px;
+    }
+    .leftBox {
+      padding: 32px 30px;
+      width: calc(100% - 60px);
+      border-radius: 0 0 12px 12px;
+    }
+    .rightBox {
+      padding: 32px 16px;
+      width: calc(100% - 36px);
+    }
+    .signSignupLink {
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    .forgotPwd {
+      font-size: 13px;
+    }
+    .signSignupOptions {
+      margin-top: 0px;
+    }
+    .googleBtn {
+      width: calc(100% - 32px);
+      border-radius: 50px;
+      margin-bottom: 4px;
+    }
+    .whatsAppBtn {
+      width: calc(100% - 32px);
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .container {
+      max-width: 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    .customCheckbox label {
+      font-size: 12px;
+    }
+    .button{
+        margin-top: 0px;
+    }
+    .updateProfileWrapper {
+      padding: 8px 0px;
+      width:calc(100% - 0px);
+      max-width: 100%;
+    }
+  }
+  

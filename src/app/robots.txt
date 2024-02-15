@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /roz/
+Disallow: /ajax_gameplay.php?url=*
+Disallow: /agames/
+
+Sitemap: https://www.atmegame.com/sitemap.xml

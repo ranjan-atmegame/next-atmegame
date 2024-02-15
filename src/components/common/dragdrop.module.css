@@ -1,0 +1,63 @@
+.gameUpload {
+    border: 2px dashed #b4c4d3;
+    position: relative;
+    margin-bottom: 2px;
+    margin-top: 8px;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.fileUpload {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.dragText{
+    color: #859caf;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.dragText h4{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.dragText h4 span{
+    color: #0277ff;
+}
+
+.fileName, .fileSize{
+    font-size: 12px;
+}
+
+.fileName{
+    margin-top: -10px;
+}
+
+.fileSize{
+    margin-bottom: 10px;
+}
+
+.errorMsg{
+    bottom: 8px;
+}
+
+.errWrongFileType{
+    bottom: -15px;
+}

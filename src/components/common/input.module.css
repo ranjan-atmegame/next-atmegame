@@ -1,0 +1,40 @@
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input {
+    width: 100%;
+    border: 2px solid #b4c4d3;
+    border-radius: 5px;
+    outline: 0;
+    color: #152236;
+    padding: 12px 16px;
+    width: calc(100% - 32px);
+    display: block;
+    font-weight: 500;
+}
+
+.floatingLabel {
+    font-size: 14px;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 10px;
+    transition: 0.2s ease all;
+    background-color: #fff;
+    padding: 2px 4px;
+}
+.autofill,
+input:focus ~ .floatingLabel, 
+input:not(:placeholder-shown) ~ .floatingLabel {
+    top:-10px;
+    font-size:14px;
+}

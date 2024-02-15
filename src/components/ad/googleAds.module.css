@@ -1,0 +1,24 @@
+.googleAd{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    color: #000;
+    height: 100%;
+}
+.addInner{
+   width: 100%;
+   height: 100px;
+}
+
+@media (max-width: 992px) {
+    .googleAd{
+        color: #fff;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .adInner{
+        width: 100%;
+        height: 320px;
+     }
+}

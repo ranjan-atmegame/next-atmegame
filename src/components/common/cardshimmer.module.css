@@ -1,0 +1,140 @@
+.listParent {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list {
+    height: auto;
+    width: calc(16.666% - 20px);
+    background-color: #ccc;
+    margin: 16px 10px 0;
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px #00000038;
+    transition: 0.6s;
+}
+
+
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmerEffect {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+}
+
+.blogListParent {
+    margin: 0;
+    padding: 0;
+}
+
+.blogList {
+    /* padding: 10px; */
+}
+
+.imageDiv {
+    width: 260px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.date {
+    height: 15px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.head {
+    height: 15px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.desp {
+    height: 100px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.commonShimmer {
+    display: "block";
+    margin: 0 10px;
+}
+
+.imageDivCommon {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.line1 {
+    width: 90%;
+}
+
+.line2 {
+    width: 80%;
+}
+
+.imageDivSearch {
+    width: 70px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.serachTxt {
+    width: 150px;
+    display: inline-block;
+    border-radius: 5px;
+    vertical-align: -11px;
+}
+
+.searchShimmerBox {
+    /* width: 100%; */
+    background-color: #ccc;
+    margin: 3px 15px;
+    border-radius: 5px;
+}
+
+.searchList li:first-child>.searchShimmerBox {
+    margin-top: 15px;
+}
+
+
+.list img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 100px;
+    height: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    .commonShimmer {
+        margin: 0 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .listParent .list {
+        width: calc(50% - 20px);
+    }
+}

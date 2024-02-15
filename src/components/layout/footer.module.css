@@ -1,0 +1,235 @@
+footer.mainFooter {
+  padding: 16px 0 0px 0;
+  margin-top: 70px;
+  background: #005FCD ;
+  position: relative;
+  font-size: 14px;
+}
+
+footer.mainFooter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+  height: 60px;
+  background: #005FCD ;
+  border-radius: 360% 360% 0% 0%;
+}
+
+.dFlex {
+  display: flex;
+}
+
+footer.mainFooter h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+footer.mainFooter p{
+  color: #fff;
+}
+
+.aboutAtmegames {
+  padding-right: 50px;
+  font-size: 16px;
+  padding-top: 0px;
+  line-height: 24px;
+}
+.footerLink ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footerLink ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footerLink ul li a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: normal;
+}
+.footerLink ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.socialLinks {
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.socialLinks ul{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.socialLinks ul li {
+  /* background: #dbe7ff; */
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.socialLinks ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: #ffffffcc;
+  border-radius: 50px;
+  padding-right: 16px;
+}
+
+.socialLinks ul li a::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #c9dbff;
+  border-radius: 24px;
+  margin-right: 8px;
+}
+
+footer .socialLinks ul li:hover ::before {
+  background-color: #82bcff;
+  border: #82bcff 1px solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.socialLinks ul li .fb::before {
+  background: #fff url("https://www.atmegame.com/img/facebook-icon.svg") center
+    center no-repeat padding-box;
+}
+
+.socialLinks ul li .tw::before {
+  background: #fff url("https://www.atmegame.com/img/twitter-icon.svg") center center
+    no-repeat padding-box;
+}
+
+.socialLinks ul li .insta::before {
+  background: #fff url("https://www.atmegame.com/img/instagram-icon.svg") center
+    center no-repeat padding-box;
+}
+.socialLinks ul li .pin::before {
+  background: #fff url("https://www.atmegame.com/img/pinterest-icon.svg") center
+    center no-repeat padding-box;
+}
+.socialLinks ul li .in::before {
+  background: #fff url("/img/in.png") center
+    center no-repeat padding-box;
+}
+
+.copyRightInfo {
+  background: #00000047;
+  font-size: 12px;
+  color: #fff;
+  padding: 12px 0px;
+  margin-top: 24px;
+}
+.copyRightInfo .containerInfo{
+  width: 94%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyRightInfo .containerInfo a{
+  color: #fff;
+  margin-left: 16px;
+}
+
+.copyRightInfo .containerInfo a:hover{
+  color: #b4d2ff;
+}
+
+
+@media (max-width: 992px) {
+  footer.mainFooter{
+    padding: 0;
+    background: #eaf1ff;
+  }
+  footer.mainFooter::before{
+    background: #eaf1ff;
+  }
+  .aboutAtmegames{
+    padding: 0px 20px;
+  }
+  footer.mainFooter p{
+    color: #152236;
+  }
+
+  .footerLink ul li a, .footerLink ul li a:hover, .footerLink ul li a:active{
+    color: #152236;
+  }
+
+  footer.mainFooter .dFlex {
+    width: calc(100% - 18px);
+    padding: 0px 8px;
+  }
+
+  footer.mainFooter h3{
+    margin: 8px 0px;
+    margin-top: 0;
+    color: #152236;
+  }
+  .footerLink{
+    padding:0px 20px;
+    width: calc(50% - 40px) !important;
+  }
+  footer.mainFooter .dFlex .socialLinks{
+    padding: 0px 0px 0px 20px;
+    width: calc(100% - 20px);
+  }
+  footer.mainFooter .dFlex .socialLinks ul {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 16px;
+  }
+  footer.mainFooter .dFlex .socialLinks ul li {
+    margin-bottom: 0px;
+  }
+  footer.mainFooter .socialLinks {
+    width: 100%;
+  }
+  footer.mainFooter .socialLinks h3{
+    display: none;
+  }
+  .socialLinks ul li a{
+    background: transparent;
+    padding-right: 4px;
+  }
+  .socialLinks ul li a span{
+    display: none;
+  }
+  .copyRightInfo{
+    background: #0064e3;
+  }
+}

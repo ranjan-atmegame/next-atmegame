@@ -1,0 +1,36 @@
+.backWrapper{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 16px;
+    left: -2px;
+    z-index: 1002;
+    background: #fff;
+    border-radius: 0px 8px 8px 0px;
+    padding: 6px 8px 2px 8px;
+}
+
+.backWrapper .content{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.backWrapper .content .backIcon{
+    margin-left: 0px;
+    cursor: pointer;
+}
+.backWrapper .content .atmeLogo{
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.backWrapper .content .drag{
+    margin-left: 6px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.draggable {
+    position: fixed;
+    top: 16px;
+    left: -2px;
+  }

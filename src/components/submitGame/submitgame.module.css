@@ -1,0 +1,54 @@
+.mainSubmit {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    margin: 0px auto;
+    max-width: 94%;
+    width: 100%;
+    position: relative;
+  }
+.submitgame{
+    -webkit-box-shadow: 0 10px 15px #d3d8eb;
+    box-shadow: 0 10px 15px #d3d8eb;
+    border-top: solid #e3e9ff 0px;
+    border-radius: 8px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: flex;
+    background-color: #fff;
+}
+
+.leftBlock{
+    padding: 10px 110px 50px;
+    background: #f1f4fd;
+    width: 100%;
+    border-radius: 12px 0 0 12px;
+}
+
+.rightBlock{
+    padding: 32px 110px;
+    width: 100%;
+}
+
+@media (max-width:900px){
+    .submitgame{
+        flex-direction: column-reverse;
+        padding: 16px;
+        margin:8px;
+        box-shadow: 0 10px 15px #18181852;
+    }
+    .rightBlock{
+        padding: 0px;
+    }
+    .leftBlock{
+        padding: 16px;
+        margin-top: 20px;
+        border-radius: 16px;
+        width: auto;
+    }
+    .leftBlock img{
+        max-height: 300px;
+    }
+}
