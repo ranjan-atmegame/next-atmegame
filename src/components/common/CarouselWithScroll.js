@@ -100,7 +100,10 @@ export default function CarouselWithScroll({
                 items.length > 0 &&
                 items.map((item, i) => {
                   const name = `Play Online ${item.name} Games`;
-                  const src = item && item.name ? `${IMAGE_PATH_NEW}cat/${item.name.toLowerCase()}.png` : "/img/noGameImage";
+                  const src =
+                    item && item.name
+                      ? `${IMAGE_PATH_NEW}cat/${item.name.toLowerCase()}.png`
+                      : "/img/noGameImage";
                   let img = item.icon
                     ? src
                     : `${SLIDES_IMG_PATH}${device}/${item.image}_slide.jpg`;
@@ -116,6 +119,7 @@ export default function CarouselWithScroll({
                       id={item.name}
                     >
                       <Link
+                        prefetch={false}
                         href={url}
                         className={`${styles.gameCardImg} ${styles.carouselSlide}`}
                       >

@@ -80,7 +80,7 @@ export default function Form() {
       });
 
       // router.push("/");
-      window.location.href="/";
+      window.location.href = "/";
     } catch (error) {
       setState((prevState) => ({
         ...prevState,
@@ -141,7 +141,11 @@ export default function Form() {
           id="termsConditions"
         />
         <label htmlFor="termsConditions">Remember Password</label>
-        <Link className={styles.forgotPwd} href="/forgot-password">
+        <Link
+          prefetch={false}
+          className={styles.forgotPwd}
+          href="/forgot-password"
+        >
           Forgot Password?
         </Link>
       </div>
@@ -155,7 +159,9 @@ export default function Form() {
 
       <div className={styles.signSignupLink}>
         Don’t have a profile? &nbsp;
-        <Link href="/signup">Create New Account</Link>
+        <Link prefetch={false} href="/signup">
+          Create New Account
+        </Link>
       </div>
     </form>
   );

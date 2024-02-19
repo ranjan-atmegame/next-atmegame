@@ -18,7 +18,7 @@ export default function ProfileHeader({
       <div className={styles.cardHeader}>
         <div className={styles.gameCategory}>
           <Icon
-          src={`${icon}`}
+            src={`${icon}`}
             // src={`/img/category/${icon}.png`}
             alt={`${title}`}
             title={`${title}`}
@@ -30,7 +30,7 @@ export default function ProfileHeader({
             <span className={styles.b_border}>{`${startCase(title)}`}</span>
 
             {isMoreBtn && (
-              <Link href={slug}>
+              <Link prefetch={false} href={slug}>
                 <span className={styles.viewMore}>
                   More
                   <Icon

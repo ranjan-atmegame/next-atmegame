@@ -53,7 +53,7 @@ export default function Sidebar({
           {isSignedIn && (
             <>
               <li>
-                <Link href="/dashboard">
+                <Link prefetch={false} href="/dashboard">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/new-games-mobile-icon.svg`}
                     title=""
@@ -66,7 +66,7 @@ export default function Sidebar({
                 </Link>
               </li>
               <li>
-                <Link href="/user/profile">
+                <Link prefetch={false} href="/user/profile">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/profile-mobile-icon.svg`}
                     title=""
@@ -79,7 +79,7 @@ export default function Sidebar({
                 </Link>
               </li>
               <li>
-                <Link title="" href="/user/favourites">
+                <Link prefetch={false} title="" href="/user/favourites">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/favourite-mobile-icon.svg`}
                     title=""
@@ -93,7 +93,7 @@ export default function Sidebar({
               </li>
 
               {/* <li>
-                <Link title="" href="/user/friends">
+                <Link prefetch={false} title="" href="/user/friends">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/friends-mobile-icon.svg`}
                     title=""
@@ -107,7 +107,7 @@ export default function Sidebar({
             </>
           )}
           <li>
-            <Link title="" href="/user/coins-history">
+            <Link prefetch={false} title="" href="/user/coins-history">
               <Image
                 src={`${S3_IMAGE_PATH}/img/coins-mobile-icon.svg`}
                 title=""
@@ -124,7 +124,7 @@ export default function Sidebar({
         <h4> </h4>
         <ul onClick={closeSidebarOnClick}>
           <li>
-            <Link title="" href="">
+            <Link prefetch={false} title="" href="">
               <Image
                 src={`${S3_IMAGE_PATH}/img/notifications-mobile-icon.svg`}
                 title=""
@@ -140,7 +140,7 @@ export default function Sidebar({
           {isSignedIn && (
             <>
               <li>
-                <Link title="" href="/leaderboard">
+                <Link prefetch={false} title="" href="/leaderboard">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/leaderboard-mobile-icon.svg`}
                     title=""
@@ -155,7 +155,7 @@ export default function Sidebar({
               </li>
 
               <li>
-                <Link title="" href="/user/recommended-games">
+                <Link prefetch={false} title="" href="/user/recommended-games">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/recommended-mobile-icon.svg`}
                     title=""
@@ -170,7 +170,7 @@ export default function Sidebar({
               </li>
 
               <li>
-                <Link title="" href="/user/games-played">
+                <Link prefetch={false} title="" href="/user/games-played">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/total-games-played-mobile-icon.svg`}
                     title=""
@@ -184,7 +184,7 @@ export default function Sidebar({
                 </Link>
               </li>
               <li>
-                <Link title="" href="/user/liked">
+                <Link prefetch={false} title="" href="/user/liked">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/liked-mobile-icon.svg`}
                     title=""
@@ -198,7 +198,7 @@ export default function Sidebar({
                 </Link>
               </li>
               <li>
-                <Link title="" href="/user/disliked">
+                <Link prefetch={false} title="" href="/user/disliked">
                   <Image
                     src={`${S3_IMAGE_PATH}/img/disliked-mobile-icon.svg`}
                     title=""
@@ -223,7 +223,12 @@ export default function Sidebar({
       <div className={styles.menuItemContainer}>
         <div className={styles.profileBox}>
           <div className={styles.btnsCloseHome}>
-            <Link href="/" className={styles.tigerIcon} onClick={closeSidebar}>
+            <Link
+              prefetch={false}
+              href="/"
+              className={styles.tigerIcon}
+              onClick={closeSidebar}
+            >
               <Image
                 src="https://www.atmegame.com/img/logo-icon.png"
                 title="Go to Home"
@@ -249,7 +254,7 @@ export default function Sidebar({
           <h4>Games Categories</h4>
           <ul onClick={closeSidebarOnClick}>
             <li>
-              <Link title="" href="/online-new-games">
+              <Link prefetch={false} title="" href="/online-new-games">
                 <Image
                   src="https://www.atmegame.com/img/new-games-mobile-icon.svg"
                   title=""
@@ -262,7 +267,7 @@ export default function Sidebar({
               </Link>
             </li>
             <li>
-              <Link title="" href="/online-most-played-games">
+              <Link prefetch={false} title="" href="/online-most-played-games">
                 <Image
                   src="https://www.atmegame.com/img/new-games-mobile-icon.svg"
                   title=""
@@ -275,7 +280,7 @@ export default function Sidebar({
               </Link>
             </li>
             <li>
-              <Link title="" href="/online-cricket-games">
+              <Link prefetch={false} title="" href="/online-cricket-games">
                 <Image
                   src="https://www.atmegame.com/img/new-games-mobile-icon.svg"
                   title=""
@@ -293,6 +298,7 @@ export default function Sidebar({
             <ul>
               <li>
                 <Link
+                  prefetch={false}
                   href="https://www.facebook.com/Atmegame"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -303,6 +309,7 @@ export default function Sidebar({
               </li>
               <li>
                 <Link
+                  prefetch={false}
                   href="https://twitter.com/atmegame"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -313,6 +320,7 @@ export default function Sidebar({
               </li>
               <li>
                 <Link
+                  prefetch={false}
                   href="https://www.instagram.com/atmegame"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -323,6 +331,7 @@ export default function Sidebar({
               </li>
               <li>
                 <Link
+                  prefetch={false}
                   href="https://www.linkedin.com/company/atmegame/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -332,7 +341,7 @@ export default function Sidebar({
                 </Link>
               </li>
               {/* <li>
-                <Link
+                <Link prefetch={false}
                   href="https://in.pinterest.com/atmegame"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -16,7 +16,6 @@ import styles from "./signup.module.css";
 import GoogleLogin from "../signin/google";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 export default function SignUpForm() {
-
   const [state, setState] = useState({
     userName: "",
     email: "",
@@ -26,7 +25,7 @@ export default function SignUpForm() {
     country: "",
     tc: false,
     successMsg: "",
-    errorMsg: ""
+    errorMsg: "",
   });
 
   const userGender = [
@@ -48,7 +47,12 @@ export default function SignUpForm() {
 
   async function handleChange(e) {
     const { name, value } = e.target;
-    setState((prev) => ({ ...prev, successMsg: "", errorMsg: "", [name]: value }));
+    setState((prev) => ({
+      ...prev,
+      successMsg: "",
+      errorMsg: "",
+      [name]: value,
+    }));
     setError("");
     setRadioErr("");
   }
@@ -57,8 +61,9 @@ export default function SignUpForm() {
     const resp = await checkExistingUserName(user);
     const count = resp.count;
     const errors = {};
-    errors["userName"] = `${user} ${count > 0 ? "is already exists." : " is valid username."
-      }`;
+    errors["userName"] = `${user} ${
+      count > 0 ? "is already exists." : " is valid username."
+    }`;
     setError(errors);
     setColors(count > 0 ? "red" : "green");
   }
@@ -76,7 +81,16 @@ export default function SignUpForm() {
     setState((prev) => ({ ...prev, tc }));
   }
 
-  const { userName, email, password, confirmPassword, tc, gender, successMsg, errorMsg } = state;
+  const {
+    userName,
+    email,
+    password,
+    confirmPassword,
+    tc,
+    gender,
+    successMsg,
+    errorMsg,
+  } = state;
 
   async function sumbitForm(e) {
     e.preventDefault();
@@ -97,7 +111,7 @@ export default function SignUpForm() {
         setState({
           successMsg: resp.res && resp.res.error ? "" : resp.msg,
           errorMsg: resp.res && resp.res.error ? resp.res.error : "",
-          tc: false
+          tc: false,
         });
         setError();
       }
@@ -183,12 +197,24 @@ export default function SignUpForm() {
           autocomplete="new-password"
         />
         <div className={styles.customCheckbox}>
-          <CheckBox onChange={handleCheckBox} name="tc" error={error} id="tc" checked={tc}>
+          <CheckBox
+            onChange={handleCheckBox}
+            name="tc"
+            error={error}
+            id="tc"
+            checked={tc}
+          >
             <>
               Accept
-              <Link href="/terms-condition"> Terms &amp; Conditions </Link>
+              <Link prefetch={false} href="/terms-condition">
+                {" "}
+                Terms &amp; Conditions{" "}
+              </Link>
               and
-              <Link href="/privacy-policy"> Privacy Policy</Link>
+              <Link prefetch={false} href="/privacy-policy">
+                {" "}
+                Privacy Policy
+              </Link>
             </>
           </CheckBox>
         </div>
@@ -200,7 +226,9 @@ export default function SignUpForm() {
         </GoogleOAuthProvider>
         <div className={styles.signSignupLink}>
           Already have a profile? &nbsp;
-          <Link href="/signin">Sign in</Link>
+          <Link prefetch={false} href="/signin">
+            Sign in
+          </Link>
         </div>
       </form>
     </div>

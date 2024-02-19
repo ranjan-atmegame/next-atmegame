@@ -66,6 +66,7 @@ export default function Content({ token, styles, isPagination = false }) {
       return (
         <li key={range}>
           <Link
+            prefetch={false}
             href=""
             onClick={(e) => handleRankType(e, range)}
             className={`${styles[status]}`}

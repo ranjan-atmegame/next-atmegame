@@ -75,7 +75,11 @@ export default function SubCategories({
         )}
       </section>
       {mobile && subcat && Array.isArray(subcat) && subcat.length > 0 && (
-        <Link href="/sitemap" className={styles.moreCategoriesBtn}>
+        <Link
+          prefetch={false}
+          href="/sitemap"
+          className={styles.moreCategoriesBtn}
+        >
           More Categories
         </Link>
       )}

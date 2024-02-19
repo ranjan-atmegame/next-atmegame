@@ -27,7 +27,12 @@ export default function Breadcrumb({ category, subCategory, game }) {
           itemScope
           itemType="https://schema.org/ListItem"
         >
-          <Link href={`/${item.slug}`} title={item.name} itemProp="item">
+          <Link
+            prefetch={false}
+            href={`/${item.slug}`}
+            title={item.name}
+            itemProp="item"
+          >
             <span itemProp="name">
               {item.name} <i className="arrows right"></i>
             </span>

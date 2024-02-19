@@ -31,7 +31,11 @@ export default function Item({
       className={`${styles.gameCard} ${styles[gameClass]} ${styles[greyCls]}`}
       id={id}
     >
-      <Link href={`/games/${game.slug}`} className={styles.gameCardImg}>
+      <Link
+        prefetch={false}
+        href={`/games/${game.slug}`}
+        className={styles.gameCardImg}
+      >
         <div className={styles.imgwrapper}>
           <GameImage
             src={img}

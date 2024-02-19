@@ -42,6 +42,7 @@ export default function Leaderboard({ auth: { token } }) {
       return (
         <li key={range}>
           <Link
+            prefetch={false}
             href=""
             onClick={(e) => handleRankType(e, range)}
             className={`${styles.status}`}
@@ -77,7 +78,12 @@ export default function Leaderboard({ auth: { token } }) {
           {listUsers()}
 
           <div className="">
-            <Link className={styles.btnFlat} title="" href="/leaderboard">
+            <Link
+              prefetch={false}
+              className={styles.btnFlat}
+              title=""
+              href="/leaderboard"
+            >
               See All
             </Link>
           </div>

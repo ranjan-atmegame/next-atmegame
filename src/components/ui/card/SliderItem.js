@@ -5,13 +5,17 @@ import styles from "./item.module.css";
 import { SLIDES_IMG_PATH } from "@/utils/Constants";
 import useDevice from "@/hooks/useDevice";
 
-const SliderItem = ({ game, gameClass, src, specialDevice="" }) => {
+const SliderItem = ({ game, gameClass, src, specialDevice = "" }) => {
   const [mobile] = useDevice();
   const device = specialDevice ? specialDevice : mobile ? "mobile" : "desktop";
 
   return (
     <div className={`${styles.gameCard} ${styles[gameClass]} itemWidth`}>
-      <Link href={`/games/${game.slug}`} className={styles.gameCardImg}>
+      <Link
+        prefetch={false}
+        href={`/games/${game.slug}`}
+        className={styles.gameCardImg}
+      >
         <div className={styles.imgwrapper}>
           <GameImage
             src={`${SLIDES_IMG_PATH}${device}/${game.image}_slide.jpg`}

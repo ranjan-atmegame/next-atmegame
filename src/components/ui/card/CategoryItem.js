@@ -14,11 +14,15 @@ const CategoryItem = ({ category, gameClass }) => {
   //     ]
   //   : [50, 50, "/img/sports.png"];
 
-  const src = category && category.name ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png` : "/img/noGameImage";
+  const src =
+    category && category.name
+      ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png`
+      : "/img/noGameImage";
 
   return (
     <div className={`${styles.gameCard} ${styles[gameClass]} itemWidth`}>
       <Link
+        prefetch={false}
         href={`/online-${category.slug}-games`}
         className={styles.gameCardImg}
       >

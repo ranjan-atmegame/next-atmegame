@@ -8,23 +8,29 @@ import { COLORS, IMAGE_PATH_NEW } from "@/utils/Constants";
 
 import styles from "./relatedCategory.module.css";
 
-const RelatedCategory = ({ categoryId, isMobile, apiCalls = true, categories = [] }) => {
-
+const RelatedCategory = ({
+  categoryId,
+  isMobile,
+  apiCalls = true,
+  categories = [],
+}) => {
   const [category, setCategory] = useState(categories);
 
   useEffect(() => {
     {
-      apiCalls && categoryId && fetchGameRelatedCategory(categoryId).then((response) => {
-        if (response.result) {
-          setCategory(response.result);
-        }
-      })
-    };
+      apiCalls &&
+        categoryId &&
+        fetchGameRelatedCategory(categoryId).then((response) => {
+          if (response.result) {
+            setCategory(response.result);
+          }
+        });
+    }
   }, [categoryId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    setCategory(categories)
-  }, [categories])
+    setCategory(categories);
+  }, [categories]);
 
   return (
     <div className={styles.relatedCategories}>
@@ -37,11 +43,15 @@ const RelatedCategory = ({ categoryId, isMobile, apiCalls = true, categories = [
               : categoryName.substr(0, 10) + "...";
 
           let nameUCFirst = startCase(name);
-          const src = item && item.name ? `${IMAGE_PATH_NEW}cat/${item.name.toLowerCase()}.png` : "/img/noGameImage"
+          const src =
+            item && item.name
+              ? `${IMAGE_PATH_NEW}cat/${item.name.toLowerCase()}.png`
+              : "/img/noGameImage";
 
           return (
             <li key={item.name}>
               <Link
+                prefetch={false}
                 href={`/online-${item.slug}-games`}
                 className={styles.iconSoccer}
                 style={{ backgroundColor: COLORS[index] }}

@@ -5,7 +5,7 @@ export default function CoinItem({ styles, transaction }) {
   return (
     <div className={styles.coinsBox}>
       <div className={styles.listItems}>
-        <Link href={``}>
+        <Link prefetch={false} href={``}>
           <div className={styles.leftItem}>
             <h4>{transaction.name}</h4>
             <span>

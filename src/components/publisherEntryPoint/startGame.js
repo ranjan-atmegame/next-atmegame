@@ -17,7 +17,7 @@ const TopGames = ({ topWeeklyGames }) => {
         <ul>
           {games.map((game) => (
             <li key={game.name}>
-              <Link href={`/games/${game.slug}`}>
+              <Link prefetch={false} href={`/games/${game.slug}`}>
                 <Image
                   src={`${SLIDES_IMG_PATH}${device}/${game.image}_slide.jpg`}
                   alt={`Play Online ${game.name} Game`}

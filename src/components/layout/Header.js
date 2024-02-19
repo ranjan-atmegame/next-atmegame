@@ -25,6 +25,7 @@ export default function Header() {
             />
           )}
           <Link
+            prefetch={false}
             className={styles.logoLink}
             href="/"
             title="Play Online Free Games - AtmeGame"
@@ -46,7 +47,12 @@ export default function Header() {
           <div className={styles.searchResults}>
             <SearchIcon />
           </div>
-          <Link title="" className={styles.notificationIcon} href="">
+          <Link
+            prefetch={false}
+            title=""
+            className={styles.notificationIcon}
+            href=""
+          >
             <Icon
               src={`${S3_IMAGE_PATH}/img/notification-icon.svg`}
               title="Notification"

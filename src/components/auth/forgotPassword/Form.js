@@ -75,7 +75,7 @@ export default function ForgotPassForm({
           />
         </form>
       )}
-      <Link className={styles.space} href={`/signin`}>
+      <Link prefetch={false} className={styles.space} href={`/signin`}>
         {signInText}
       </Link>
     </div>

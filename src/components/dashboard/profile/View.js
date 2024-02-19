@@ -50,7 +50,11 @@ const ViewProfile = ({ user }) => {
             />
             <img src={userImage} title="user profile" alt="user profile" />
           </div>
-          <Link className={styles.btnFlat} href={`/user/edit-profile`}>
+          <Link
+            prefetch={false}
+            className={styles.btnFlat}
+            href={`/user/edit-profile`}
+          >
             Edit Profile
           </Link>
         </div>

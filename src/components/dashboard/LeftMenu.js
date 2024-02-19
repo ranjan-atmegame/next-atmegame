@@ -38,7 +38,7 @@ export default function LeftMenu({ leftStyle, auth, updatedUser }) {
               link.to === router.pathname ? menuStyles.active : "";
             return (
               <li key={link.to}>
-                <Link href={link.to} className={linkClass}>
+                <Link prefetch={false} href={link.to} className={linkClass}>
                   {link.name}
                 </Link>
               </li>
@@ -46,7 +46,7 @@ export default function LeftMenu({ leftStyle, auth, updatedUser }) {
           })}
 
           <li key="logout">
-            <Link href="/" onClick={handleLogout}>
+            <Link prefetch={false} href="/" onClick={handleLogout}>
               Logout
             </Link>
           </li>

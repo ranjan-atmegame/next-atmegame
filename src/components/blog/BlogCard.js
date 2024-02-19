@@ -25,7 +25,11 @@ export default function BlogCard({
           <li>
             {newTag && <div className={styles.new}>New</div>}
             <span className={`${styles.postImage} ${styles[imgSize]}`}>
-              <Link href={`/blog/${url}`} title={`/blog/${url}`}>
+              <Link
+                prefetch={false}
+                href={`/blog/${url}`}
+                title={`/blog/${url}`}
+              >
                 <Image
                   src={`${S3_IMAGE_PATH}/img/blog/${img}`}
                   width={260}
@@ -40,7 +44,11 @@ export default function BlogCard({
             <div className={`${styles.postContent}  ${styles[cardSize]}`}>
               <span>{`Published on ${ddMonYy(date)}`}</span>
               <h2>
-                <Link href={`/blog/${url}`} title={`/blog/${url}`}>
+                <Link
+                  prefetch={false}
+                  href={`/blog/${url}`}
+                  title={`/blog/${url}`}
+                >
                   {title}
                 </Link>
               </h2>

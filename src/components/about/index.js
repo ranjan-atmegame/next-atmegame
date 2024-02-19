@@ -33,7 +33,11 @@ export default function AboutUs() {
               />
               <h2>Join Our program and become a atmegame Partner</h2>
               <div className={styles.rightBtn}>
-                <Link href="/contact-us" className={styles.joinUsNow}>
+                <Link
+                  prefetch={false}
+                  href="/contact-us"
+                  className={styles.joinUsNow}
+                >
                   JOIN PROGRAM
                 </Link>
               </div>
@@ -244,7 +248,11 @@ export default function AboutUs() {
                   iPhone to have fun on the go!
                 </p>
 
-                <Link href="/contact-us" className={styles.joinUsNow}>
+                <Link
+                  prefetch={false}
+                  href="/contact-us"
+                  className={styles.joinUsNow}
+                >
                   JOIN NOW
                 </Link>
               </div>

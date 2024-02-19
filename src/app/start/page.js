@@ -28,7 +28,7 @@ const Start = async () => {
       <CardContainer>
         <div className={styles.gameAndQuizes}>
           <div className={styles.header}>
-            <Link href="/">
+            <Link prefetch={false} prefetch={false} href="/">
               <h1>Play Games and Quizzes!</h1>
               <h4>We selected some best games for you.</h4>
             </Link>
@@ -38,12 +38,16 @@ const Start = async () => {
           </div>
           <div className={styles.footer}>
             <div className={styles.signIn}>
-              <Link href="/signin">Sign In</Link>
+              <Link prefetch={false} href="/signin">
+                Sign In
+              </Link>
               <span>Or</span>
-              <Link href="/signup">Sign Up</Link>
+              <Link prefetch={false} href="/signup">
+                Sign Up
+              </Link>
             </div>
             <div className={styles.moreGames}>
-              <Link className={styles.moreGamesBtn} href="/">
+              <Link prefetch={false} className={styles.moreGamesBtn} href="/">
                 No, Show more Games
               </Link>
             </div>

@@ -44,6 +44,7 @@ export default function CardHeader({
           <HtmlTag tag={h1 ? "h1" : "h2"} cls={headingColor} styles={styles}>
             {isMoreBtn ? (
               <Link
+                prefetch={false}
                 href={slug}
                 style={{ display: `${mobile ? "block" : "inline-block"}` }}
                 title={title}
@@ -57,6 +58,7 @@ export default function CardHeader({
           </HtmlTag>
           {isMoreBtn && (
             <Link
+              prefetch={false}
               href={slug}
               title={`Online ${title}`}
               className={styles.headingMore}
@@ -83,7 +85,11 @@ export default function CardHeader({
     <div className={styles.cardHeader}>
       <div className={styles.gameCategory}>
         <h2>{title}</h2>
-        {isMoreBtn && <Link href={slug}>More &nbsp; &gt;</Link>}
+        {isMoreBtn && (
+          <Link prefetch={false} href={slug}>
+            More &nbsp; &gt;
+          </Link>
+        )}
       </div>
     </div>
   );

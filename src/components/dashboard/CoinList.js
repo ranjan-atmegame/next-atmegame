@@ -13,6 +13,7 @@ export default function CoinList({ transactions, showAllLink = false }) {
       {showAllLink && (
         <div className="">
           <Link
+            prefetch={false}
             href="/user/coins-history"
             className="w-100 btn-flat mt-8"
             title=""

@@ -26,7 +26,11 @@ export default function NotFound({ games }) {
             Sorry! We are unable to process your current request. Go back to
             home
           </p>
-          <Link className={`${styles.goToHome} ${styles.shine}`} href={`/`}>
+          <Link
+            prefetch={false}
+            className={`${styles.goToHome} ${styles.shine}`}
+            href={`/`}
+          >
             Go Back to home
           </Link>
 
@@ -36,7 +40,7 @@ export default function NotFound({ games }) {
               <ul>
                 {games.map((game) => (
                   <li key={game.name}>
-                    <Link href={`/games/${game.slug}`}>
+                    <Link prefetch={false} href={`/games/${game.slug}`}>
                       <Image
                         src={`${SLIDES_IMG_PATH}${device}/${game.image}_slide.jpg`}
                         alt={`Play Online ${game.name} Game`}

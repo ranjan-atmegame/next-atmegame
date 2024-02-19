@@ -16,13 +16,16 @@ const Item = forwardRef(
       name = "",
       height = 46,
       width = 46,
-      priority = false
+      priority = false,
     },
     ref
   ) => {
     const [mobile] = useDevice();
     const title = `Online ${startCase(category.name)} Games List`;
-    const src = category && category.name ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png` : "/img/noGameImage";
+    const src =
+      category && category.name
+        ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png`
+        : "/img/noGameImage";
 
     const categorySlug = !["more-games", "/sitemap"].includes(category.slug)
       ? `/online-${category.slug}-games`
@@ -32,7 +35,7 @@ const Item = forwardRef(
       if (title === "subMore") {
         e.preventDefault();
         if (mobile) {
-          window.location.href = "/sitemap"
+          window.location.href = "/sitemap";
         } else if (typeof toggleSubCatCB === "function") {
           toggleSubCatCB();
         }
@@ -52,11 +55,12 @@ const Item = forwardRef(
           category.title == "subMore"
             ? styles.categorymore
             : category.title == "sub-cat"
-              ? styles.subcategorymore
-              : ""
+            ? styles.subcategorymore
+            : ""
         }
       >
         <Link
+          prefetch={false}
           href={categorySlug}
           onClick={(e) => handleSubCategory(e, category.title)}
         >

@@ -41,13 +41,13 @@ export default function GoogleLogin() {
         console.log(error);
       }
     },
-    onError: (errorResponse) => { },
+    onError: (errorResponse) => {},
   });
 
   return (
     <div className={styles.signSignupOptions} onClick={googleLogin}>
       <span>&nbsp;</span>
-      <Link href="#" className={styles.googleBtn}>
+      <Link prefetch={false} href="#" className={styles.googleBtn}>
         <Icon
           iconClass={styles.mR10}
           src={`/img/googleLogin.svg`}

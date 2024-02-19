@@ -65,10 +65,14 @@ const Profilecontent = ({
     <>
       {games && (
         <div key={games._id} className={styles.cardBody}>
-            <div className={styles.profilediv}>User Rank : #{games.rank}</div>
-            <div className={styles.profilediv}>User Coin : #{games.coins}</div>
-            <div className={styles.profilediv}>Liked Games : #{games && games?.likes?.length}</div>
-            <div className={styles.profilediv}>Games Played : #{games && games?.totalPlayed?.length}</div>
+          <div className={styles.profilediv}>User Rank : #{games.rank}</div>
+          <div className={styles.profilediv}>User Coin : #{games.coins}</div>
+          <div className={styles.profilediv}>
+            Liked Games : #{games && games?.likes?.length}
+          </div>
+          <div className={styles.profilediv}>
+            Games Played : #{games && games?.totalPlayed?.length}
+          </div>
           <div className={styles.profilediv}>Name : {games.nickName}</div>
           <div className={styles.profilediv}>Gender: {games.gender}</div>
           <div className={styles.profilediv}>Email: {games.email}</div>
@@ -88,10 +92,22 @@ const Profilecontent = ({
           </div>
           <div className={styles.profilediv}>
             Country:
-            <Image src={`https://www.atmegame.com/img/${games.country}.svg`} width={25} height={25} alt="" unoptimized={true} />
+            <Image
+              src={`https://www.atmegame.com/img/${games.country}.svg`}
+              width={25}
+              height={25}
+              alt=""
+              unoptimized={true}
+            />
           </div>
           <div>
-            <Link className={styles.btnSmall} href={`/user/edit-profile`}>Edit Profile</Link>
+            <Link
+              prefetch={false}
+              className={styles.btnSmall}
+              href={`/user/edit-profile`}
+            >
+              Edit Profile
+            </Link>
           </div>
         </div>
       )}

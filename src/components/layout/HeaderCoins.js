@@ -22,7 +22,10 @@ export default function HeaderCoins({ userInfo, styles }) {
 
   return (
     <div className={styles.totalCoins}>
-      <Link href={auth?.isSignedIn ? "/user/coins-history" : "/signin"}>
+      <Link
+        prefetch={false}
+        href={auth?.isSignedIn ? "/user/coins-history" : "/signin"}
+      >
         <Icon
           src={`${S3_IMAGE_PATH}/img/coin-icon.png`}
           title="Coin"

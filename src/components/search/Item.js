@@ -10,8 +10,8 @@ export default function Item({
   icon,
   slug,
   hideSearchPopupCB,
-  cls="",
-  styles=[]
+  cls = "",
+  styles = [],
 }) {
   function hideSearchPopUp() {
     if (typeof hideSearchPopupCB === "function") {
@@ -20,11 +20,8 @@ export default function Item({
   }
 
   return (
-    <li key={name}
-      onClick={hideSearchPopUp}
-      className={styles[cls]}
-    >
-      <Link href={slug}>
+    <li key={name} onClick={hideSearchPopUp} className={styles[cls]}>
+      <Link prefetch={false} href={slug}>
         {icon && (
           <Icon
             alt={title}

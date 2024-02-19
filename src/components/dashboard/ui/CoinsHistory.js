@@ -11,7 +11,7 @@ function CoinsHistory({ styles, transactions }) {
       // <CoinItem key={transaction._id} transaction={transaction} />
 
       <div key={transaction._id} className={styles.listItems}>
-        <Link href={``}>
+        <Link prefetch={false} href={``}>
           <div className={styles.leftItem}>
             <h4>{transaction.name}</h4>
             <span>
@@ -45,6 +45,7 @@ function CoinsHistory({ styles, transactions }) {
           {historyJSX()}
           <div className="">
             <Link
+              prefetch={false}
               className={styles.btnFlat}
               title=""
               href="/user/coins-history"

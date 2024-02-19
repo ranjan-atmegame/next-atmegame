@@ -35,6 +35,7 @@ export default function LeaderboardDetail({ token, showAllLink = true }) {
       return (
         <li key={range}>
           <Link
+            prefetch={false}
             href=""
             onClick={(e) => handleRankType(e, range)}
             className={`${styles.status}`}
@@ -52,7 +53,12 @@ export default function LeaderboardDetail({ token, showAllLink = true }) {
       {userRankJSX}
       {showAllLink && users.length > 0 && (
         <div className="">
-          <Link href="/leaderboard" className={styles.btnFlat} title="">
+          <Link
+            prefetch={false}
+            href="/leaderboard"
+            className={styles.btnFlat}
+            title=""
+          >
             See All
           </Link>
         </div>

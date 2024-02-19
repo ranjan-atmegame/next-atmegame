@@ -18,7 +18,7 @@ export default function PublisherEntryPoint({
       <CardContainer>
         <div className={styles.gameAndQuizes}>
           <div className={styles.header}>
-            <Link href="/">
+            <Link prefetch={false} href="/">
               <h1>{heading}</h1>
               <h4>{subHeading}</h4>
             </Link>
@@ -28,12 +28,16 @@ export default function PublisherEntryPoint({
           </div>
           <div className={styles.footer}>
             <div className={styles.signIn}>
-              <Link href="/signin">Sign In</Link>
+              <Link prefetch={false} href="/signin">
+                Sign In
+              </Link>
               <span>Or</span>
-              <Link href="/signup">Sign Up</Link>
+              <Link prefetch={false} href="/signup">
+                Sign Up
+              </Link>
             </div>
             <div className={styles.moreGames}>
-              <Link className={styles.moreGamesBtn} href="/">
+              <Link prefetch={false} className={styles.moreGamesBtn} href="/">
                 No, Show more Games
               </Link>
             </div>

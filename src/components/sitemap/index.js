@@ -25,14 +25,17 @@ export default function SitemapPage() {
     return catgames.map((category) => {
       let subCategoryStr = category.subCategory.map((subcat, i) => {
         const categoryName = startCase(subcat.name);
-        const subcatSrc = subcat && subcat.name ? `${IMAGE_PATH_NEW}cat/${subcat.name.toLowerCase()}.png` : "/img/noGameImage";
+        const subcatSrc =
+          subcat && subcat.name
+            ? `${IMAGE_PATH_NEW}cat/${subcat.name.toLowerCase()}.png`
+            : "/img/noGameImage";
         return (
           <li
             className={`${styles.subcategory} ${styles.w100}`}
             key={subcat.name + i}
             id={subcat.name + i}
           >
-            <Link href={`/online-${subcat.name}-games`}>
+            <Link prefetch={false} href={`/online-${subcat.name}-games`}>
               <Icon
                 src={subcatSrc}
                 width="44"
@@ -48,7 +51,10 @@ export default function SitemapPage() {
       });
 
       const categoryName = startCase(category.name);
-      const catSrc = category && category.name ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png` : "/img/noGameImage";
+      const catSrc =
+        category && category.name
+          ? `${IMAGE_PATH_NEW}cat/${category.name.toLowerCase()}.png`
+          : "/img/noGameImage";
       return (
         <>
           <li
@@ -69,7 +75,10 @@ export default function SitemapPage() {
                 <span>&nbsp;&nbsp;{categoryName}</span>
               </span>
             ) : (
-              <Link href={`/online-${category.name.toLowerCase()}-games`}>
+              <Link
+                prefetch={false}
+                href={`/online-${category.name.toLowerCase()}-games`}
+              >
                 <Icon
                   src={catSrc}
                   width="44"

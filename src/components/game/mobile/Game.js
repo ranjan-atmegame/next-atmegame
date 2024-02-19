@@ -53,7 +53,7 @@ export default function Game({
               </span>
             )}
             {gameFound ? (
-              <Link href="#" onClick={onGamePlay}>
+              <Link prefetch={false} href="#" onClick={onGamePlay}>
                 <div
                   className={styles.gameImageMobile}
                   style={{ minHeight: "208px" }}

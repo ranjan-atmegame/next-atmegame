@@ -63,6 +63,7 @@ const Detail = ({ game, rating, auth, isMobile = true }) => {
       <ul>
         <li>
           <Link
+            prefetch={false}
             href=" "
             onClick={handleLinks}
             id="about"
@@ -73,6 +74,7 @@ const Detail = ({ game, rating, auth, isMobile = true }) => {
         </li>
         <li>
           <Link
+            prefetch={false}
             href=" "
             onClick={handleLinks}
             id="walkthrough"
@@ -83,6 +85,7 @@ const Detail = ({ game, rating, auth, isMobile = true }) => {
         </li>
         <li>
           <Link
+            prefetch={false}
             href=" "
             onClick={handleLinks}
             id="controls"

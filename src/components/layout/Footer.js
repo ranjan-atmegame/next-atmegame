@@ -31,33 +31,33 @@ export default function Footer() {
           <h3>About</h3>
           <ul>
             <li>
-              <Link title="atmegame" href="/">
+              <Link prefetch={false} title="atmegame" href="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link title="Submit a Game" href="/submit-game">
+              <Link prefetch={false} title="Submit a Game" href="/submit-game">
                 Submit a Game
               </Link>
             </li>
             <li>
-              <Link title="About Us" href="/about-us">
+              <Link prefetch={false} title="About Us" href="/about-us">
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link title="Contact Us" href="/contact-us">
+              <Link prefetch={false} title="Contact Us" href="/contact-us">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link title="Blog" href="/blog">
+              <Link prefetch={false} title="Blog" href="/blog">
                 Blog
               </Link>
             </li>
             <li>
-              <Link title="Sitemap" href="/sitemap">
+              <Link prefetch={false} title="Sitemap" href="/sitemap">
                 Sitemap
               </Link>
             </li>
@@ -67,32 +67,56 @@ export default function Footer() {
           <h3>Games</h3>
           <ul>
             <li>
-              <Link title="Sports Games" href="/online-sports-games">
+              <Link
+                prefetch={false}
+                title="Sports Games"
+                href="/online-sports-games"
+              >
                 Sports Games
               </Link>
             </li>
             <li>
-              <Link title="Action Games" href="/online-action-games">
+              <Link
+                prefetch={false}
+                title="Action Games"
+                href="/online-action-games"
+              >
                 Action Games
               </Link>
             </li>
             <li>
-              <Link title="Arcade Games" href="/online-arcade-games">
+              <Link
+                prefetch={false}
+                title="Arcade Games"
+                href="/online-arcade-games"
+              >
                 Arcade Games
               </Link>
             </li>
             <li>
-              <Link title="Racing Games" href="/online-racing-games">
+              <Link
+                prefetch={false}
+                title="Racing Games"
+                href="/online-racing-games"
+              >
                 Racing Games
               </Link>
             </li>
             <li>
-              <Link title="Adventure Games" href="/online-adventure-games">
+              <Link
+                prefetch={false}
+                title="Adventure Games"
+                href="/online-adventure-games"
+              >
                 Adventure Games
               </Link>
             </li>
             <li>
-              <Link title="Girls Games" href="/online-girls-games">
+              <Link
+                prefetch={false}
+                title="Girls Games"
+                href="/online-girls-games"
+              >
                 Girls Games
               </Link>
             </li>
@@ -108,6 +132,7 @@ export default function Footer() {
           <ul>
             <li>
               <Link
+                prefetch={false}
                 href="https://www.facebook.com/atmegame"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -118,6 +143,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                prefetch={false}
                 href="https://twitter.com/atmegame"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,6 +154,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                prefetch={false}
                 href="https://www.instagram.com/atmegame"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -138,6 +165,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                prefetch={false}
                 href="https://www.linkedin.com/company/atmegame"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +175,7 @@ export default function Footer() {
               </Link>
             </li>
             {/* <li>
-              <Link
+              <Link prefetch={false}
                 href="https://in.pinterest.com/atmegame"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -168,10 +196,18 @@ export default function Footer() {
             </a>
           </div>
           <div className={styles.tncInfo}>
-            <Link href="/terms-condition" title="Term and conditions">
+            <Link
+              prefetch={false}
+              href="/terms-condition"
+              title="Term and conditions"
+            >
               Terms & Conditions
             </Link>{" "}
-            <Link href="/privacy-policy" title="privacy policy">
+            <Link
+              prefetch={false}
+              href="/privacy-policy"
+              title="privacy policy"
+            >
               Privacy Policy
             </Link>
           </div>

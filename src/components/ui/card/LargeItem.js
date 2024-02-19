@@ -5,7 +5,11 @@ import styles from "./item.module.css";
 export default function Item({ game, gameClass, children }) {
   return (
     <div className={`${styles.gameCard} ${styles[gameClass]}`}>
-      <Link href={`/games/${game.slug}`} className={styles.gameCardImg}>
+      <Link
+        prefetch={false}
+        href={`/games/${game.slug}`}
+        className={styles.gameCardImg}
+      >
         <div className={styles.imgwrapper}>{children}</div>
         <div className={styles.gameDetails}>
           <div className={styles.gameNamePlayed}>

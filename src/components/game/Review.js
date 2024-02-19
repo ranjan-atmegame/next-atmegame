@@ -227,7 +227,12 @@ function Review({ styles, game, handle, loadGames }) {
     return (
       <ul onClick={(e) => e.stopPropagation()}>
         <li>
-          <Link href="" className={likeObj.class} onClick={handleLikes}>
+          <Link
+            prefetch={false}
+            href=""
+            className={likeObj.class}
+            onClick={handleLikes}
+          >
             <GameImage
               src={likeObj.img}
               alt="Like Game"
@@ -239,7 +244,12 @@ function Review({ styles, game, handle, loadGames }) {
           </Link>
         </li>
         <li>
-          <Link href="" className={dislikeObj.class} onClick={handleDislikes}>
+          <Link
+            prefetch={false}
+            href=""
+            className={dislikeObj.class}
+            onClick={handleDislikes}
+          >
             <GameImage
               src={dislikeObj.img}
               alt="Dislike Game"
@@ -252,6 +262,7 @@ function Review({ styles, game, handle, loadGames }) {
         </li>
         <li className={styles.favourite}>
           <Link
+            prefetch={false}
             href=""
             className={favouriteObj.class}
             onClick={handleFavourite}
@@ -270,7 +281,7 @@ function Review({ styles, game, handle, loadGames }) {
           <SocialShare currentUrl={game?.slug} />
         </li>
         <li className={styles.fullScreen}>
-          <Link href="" onClick={(e) => handleFullScreen(e)}>
+          <Link prefetch={false} href="" onClick={(e) => handleFullScreen(e)}>
             <GameImage
               src={`/img/icon-full-screen.svg`}
               alt=""
@@ -283,7 +294,12 @@ function Review({ styles, game, handle, loadGames }) {
         </li>
         {mobile && (
           <li className={`${styles.moreOptions}`}>
-            <Link href="" onClick={(e) => handleMoreBtn(e)} ref={moreRef}>
+            <Link
+              prefetch={false}
+              href=""
+              onClick={(e) => handleMoreBtn(e)}
+              ref={moreRef}
+            >
               <GameImage
                 src={mobile ? "/img/icon-more-gray.svg" : "/img/icon-more.svg"}
                 alt=""
@@ -297,6 +313,7 @@ function Review({ styles, game, handle, loadGames }) {
               <ul className={styles.moreLinks}>
                 <li className={styles.favouriteMore}>
                   <Link
+                    prefetch={false}
                     href=""
                     className={favouriteObj.class}
                     onClick={(e) => handleFavourite(e)}
